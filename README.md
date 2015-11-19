@@ -1,2 +1,2 @@
 # Beleggen
-Dit is mijn repository voor mijn R project Beleggen
+Dit is de repository voor mijn R project Beleggen
