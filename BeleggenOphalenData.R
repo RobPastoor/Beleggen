@@ -1,3 +1,4 @@
+setwd("C:\\Users\\RPR\\Work Folders\\Documents\\Beleggen")
 library(XML)
 library(tidyr)
 library(foreign)

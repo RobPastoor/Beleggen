@@ -1,3 +1,4 @@
+setwd("C:\\Users\\RPR\\Work Folders\\Documents\\Beleggen")
 library(XML)
 library(tidyr)
 library(foreign)
@@ -38,7 +39,7 @@ for(i in 1:length(fondsen)) {
           col="yellow",
           outline = TRUE
   )
-  mtext(Sys.Date(), 3, cex=0.8, line = 0)
+  mtext(Sys.time(), 3, cex=0.8, line = 0)
   mtext("Koers in euro's", 2, cex=0.8, line = 2)
   dev.off()
   rm("rDF", "fonds", "fMaand", "uMaand")
