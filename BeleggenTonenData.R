@@ -1,13 +1,15 @@
-setwd("C:\\Users\\RPR\\Work Folders\\Documents\\Beleggen")
+setwd("C:/Users/RPR/OneDrive - Oasen N.V/Documents/Beleggen")
 library(XML)
 library(tidyr)
 library(foreign)
 library(dplyr)
 
 fondsen <- c("nn.bas.mat",
-             "nn.dutch",
              "nn.dmixf.1",
+             "nn.dutch",
+             "nn.emeu.pc",
              "nn.eu.smcp",
+             "nn.g.em.mk",
              "nn.g.obl.f",
              "nn.it.fd",
              "nn.prem.dv",
@@ -16,7 +18,7 @@ fondsen <- c("nn.bas.mat",
 
 for(i in 1:length(fondsen)) {
   fonds <- fondsen[i]
-  rDF <- read.dbf(paste("Data\\", fonds, ".dbf", sep = ""), as.is = TRUE)
+  rDF <- read.dbf(paste("Data/", fonds, ".dbf", sep = ""), as.is = TRUE)
   rDF["datum"] <- paste("20", substring(rDF[,1], 1, 6), sep="")
   rDF["koers"] <- as.numeric(substring(rDF[,1], 8, 15))
   rDF["periode"] <- paste("20", substring(rDF[,1], 1, 2), "-",substring(rDF[,1], 3, 4), sep="")
